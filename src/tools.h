@@ -17,13 +17,14 @@ class Tools {
   virtual ~Tools();
 
   /**
-   * A helper method to calculate RMSE.
+   * A helper method to calculate root mean squared error between Kalman filter estimations and
+   *   ground truth.
    */
   Eigen::VectorXd CalculateRMSE(const std::vector<Eigen::VectorXd> &estimations, 
-                                const std::vector<Eigen::VectorXd> &ground_truth);
+      const std::vector<Eigen::VectorXd> &ground_truth);
 
   /**
-   * A helper method to calculate Jacobians.
+   * A helper method to calculate Jacobians (a first derivative of a multi-dimensional function).
    */
   Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x_state);
 
